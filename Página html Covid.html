@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Covid 19 Alagoas</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="intro">
+							<h1>Covid-19 no estado <br />
+							de ALAGOAS <br /></h1>	
+							<p>Um estudo realizado sobre o comportamento da doença <br />
+							no estado de alagoas </p>
+							<ul class="actions">
+								<li><a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+							</ul>
+					</header>
+
+				<!-- Cabeçario de links -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Projetos</a></li>
+							<li class="active"><a href="generic.html">Anúncio x Vendas </a></li>
+	
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+
+								
+								<h2>Problema de Negócio </h2> 
+
+								<p>“Uma empresa de comunicação com atuação em todos os municípios do estado de Alagoas designa à equipe de dados o trabalho de elaborar um relatório dinâmico onde cada sede municipal do jornal possa acessar os dados da covid 19 entre 2019 até o final de 2022. Algumas exigências foram solicitadas pela equipe, sendo o trabalho simples e intuitivo a ponto de ser uma fonte de acesso aos dados como também de uso para uma apresentação caso necessário. Outra exigência da solicitação foi que a linha temporal da covid e o estudo de óbitos seja separado. Sobre o conteúdo do relatório, a equipe deixou a cargo dos cientistas de dados.” 
+								
+								 
+								
+								<h2> Resolução com o uso da ciência de dados </h2> 
+								
+									<p> Para a resolução do problema designado a primeira etapa é coletar os dados, no caso será coletado pela página do governo do estado de alagoas utilizando técnicas de web scraping. 
+								
+									<p> A segunda etapa é estudar esses dados e transformar esses dados. Primeiro foi observado que esses dados apresentam a data de serviço, idade do paciente, município, classificação (no caso só foram coletados dados confirmados), comorbidades, situação do paciente (uti, isolamento, enfermaria, óbito), data do óbito, data de confirmação. 
+								
+									<p> De forma resumida, a análise inicial dos dados demonstrou que não há como identificar o paciente, ou seja, pode conter nos dados as mesmas pessoas que foram ao hospital, voltaram para casa e depois voltaram ao hospital e faleceram. Outras inconsistências dos dados demonstram na data de confirmação, onde demorou meses entre a confirmação do óbito e a data de confirmação, isso pode ser devido a alguma revisão de outros óbitos e as pessoas serem classificadas depois como vítimas da covid. Outros dados como sexo, idade e município demonstraram ser bem consistentes, só necessitando pequenas alterações. Por último os dados de comorbidades se mostram o maior desafio do modelo, pois apresentam diversos erros ortográficos e abreviações, ou seja, um tratamento desses dados será fortemente necessário para a padronização e identificação dos semelhantes. 
+								
+									<p> Após todo o tratamento dos dados algumas features foram criadas, mas que não necessariamente serão utilizadas, como o dia da semana da confirmação do caso, quantidade de comorbidade de cada paciente e a evolução da taxa de letalidade. Fora isso algumas transformações nos dados. 
+								
+									<p> Como alagoas contém 102 municípios, o trabalho aqui será realizado com base somente na capital alagoas, Maceió. A perguntas que o modelo foi baseado são as seguintes: 
+									<ul>
+										<li>Estudo de casos
+											<ul>
+												<li>Casos totais por cidade</li>	
+												<li>Casos totais de óbitos</li>	
+												<li>Qual a faixa etária dos contaminados pela covid 19</li>
+												<li>Qual foi a evolução dos casos mensalmente e qual a tendência atual? </li>
+												<li>Taxa de letalidade da covid ao longo do tempo e como a vacina pode ter influenciado</li>
+											</ul>
+										</li>
+										<li>Estudo de óbitos
+											<ul>
+												<li>Como está a distribuição entre as classes etárias? </li>	
+												<li>Quantas comorbidades as vítimas de covid tinham? </li>	
+												<li>Sexo das vítimas? </li>	
+												<li>Comparação da evolução dos casos e dos óbitos?</li>
+												<li>Quais as comorbidades mais comuns nas vítimas?</li>
+											</ul>
+										</li>
+									</ul>
+								<div class="image main"><img src="images/covid_1.jpg" alt="" /></div>
+									<p> Primeiramente é possível selecionar a cidade avaliada tanto pelo gráfico do estado no primeiro quadrante, assim como pela tabela de filtro acima. Os dois pequenos retângulos informam a quantidade total de casos e óbitos, sendo 129,73 mil casos com 3184 mortes na capital Alagoana. 
+
+									<p> Pelo histograma percebemos que as idades têm uma distribuição não normalizada, ou seja, há uma tendência dos dados a se concentrarem à direita dos dados. Essa concentração maior deve-se a essas pessoas serem mais ativas socialmente devido ao trabalho, levando a conclusão de serem provavelmente o público mais contaminado.  
+									
+									<p> O gráfico de casos mensais nos retorna 5 picos, tendo seu máximo em janeiro com 16 mil casos, mas esse dado aparentou ser alguma defasagem de dados dos meses anteriores pelo seu pico abrupto e da sua queda da mesma forma. Assumindo isso, conclui-se que o pico de contaminação foi realmente no início da pandemia antes das vacinas e do conhecimento dos cuidados necessários pela população. Esse gráfico confirma que a vacinação foi eficiente na queda dos casos confirmados da covid 19 em alagoas e demonstra que apesar de um pequeno pico em novem, dezembro já houve queda e assumindo que tende a agir como o mês junho julho e agosto, volte a cair consideravelmente. 
+									
+									<p> Por último temos a taxa de mortalidade, que é uma forma de medir percentualmente quantas pessoas contaminadas pela doença vão a óbito. Esse gráfico apresenta a mediana de cada mês (nesse caso a mediana foi escolhida com o intuito de tentar impedir qualquer outlier que possa ocorrer da variação da taxa de letalidade ao longo do mês) que resulta na conclusão atual que após a vacinação da população, a taxa de letalidade dessa doença fica em torno de 2%, podendo ser muito menor, devido a muitas pessoas não procurarem fazer o teste de covid pôr os sintomas serem leves ou serem assintomáticos. 
+								<div class="image main"><img src="images/covid_2.jpg" alt="" /></div>
+									<p> Entrando no estudo dos óbitos, a seleção da cidade segue a mesma da anterior. No segundo gráfico temos as classes etárias, ou seja, se a vítima era jovem, idoso, etc. Nesse caso 67% dos óbitos foram de idosos com 30% sendo de adultos e somente 1,5% sendo de jovens. Isso demonstra que realmente o grande perigo dessa doença é atingir os idosos, mas outro gráfico ajuda a separar ainda mais o grupo de risco por demonstrar a quantidade de comorbidades que uma pessoa pode ter, no caso mais de 98% dos casos tinham, pelo menos, 1 comorbidade. A leitura desses dois gráficos deixa claro já quem são as pessoas do grupo de alto risco, mas o gráfico de barra logo abaixo define ainda mais esse grupo por conter as doenças mais comuns entre as vítimas. O modo como foi feita a coleta dessas informações das comorbidades foi utilizado uma técnica de NLP chamada tf-idf que basicamente adiciona pesos para cada palavra, tanto em um texto como também em diversos documentos. Os outros dois gráficos nos informam que mais homens faleceram por covid que mulheres, mas um valor bem próximo que nós chegamos à conclusão que afeta ambos de forma igual, já o último gráfico é uma comparação mensal de óbitos e casos por covid, onde fica bastantes claro que a vacinação foi chave para o controle da pandemia, vemos como ambas as classes se comportaram próximas no início e no decorrer da pandemia, mas começou a se diferenciar em 2022 com uma grande parte já vacinada e com doses de reforço. 
+
+									<p> Abaixo é possível encontrar o código para coleta dos dados, para tratamento dos dados e o power BI, tanto para pdf como o relatório online. </p> 		
+								<h2>Temas Abordados</h2>		
+								<ul>
+									<li>Web Scraping</li>	
+									<li>NLP</li>
+									<li>Power Bi</li>
+									<li>Tratamento e análise de dados</li>
+									
+								</ul>
+								<div class="row">
+									<div class="col-12 col-12-small">
+										<ul class="actions special ">
+
+											<li><a href="Código em HTML/web_scraping _ Covid Alagoas.html" class="button larger">Coleta de dados</a></li>
+											<li><a href="Código em HTML/Tratamendo_dados_Covid_19_Alagoas (1).html" class="button larger">Tratamento de Dados</a></li>
+										</ul>
+									</div>
+									<div class="col-12 col-12-small">
+										<ul class="actions special ">
+											<li><a href="https://app.powerbi.com/groups/me/reports/415360ef-5df3-496b-8a3f-7908a0bb4e83/ReportSection?bookmarkGuid=Bookmark50a85516086a660c1d36" class="button medium">Análise no Power Bi (Report)</a></li>
+											<li><a href="Modelo covid 19.pdf" class="button medium">Analise Power Bi (PDF) </a></li>
+										</ul>
+									</div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+						
+							
+					<section>
+						<h3>Telefone de contado</h3>
+						<p><a href="#">(82) 99920-9828</a></p>
+					</section>
+					<section>
+						<h3>Email de contato</h3>
+						<p><a href="#">alcidesgabriel.ds@gmail.com</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
+
+						</ul>
+					</section>
+				
+			</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

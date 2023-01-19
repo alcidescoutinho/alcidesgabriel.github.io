@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Empréstimo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="intro">
+							<h1>Avaliação automatizada <br />
+							para empréstimos imobiliários <br /></h1>	
+							<p>O tempo de avaliação do cliente para aprovação de empréstimo começa a pesar na empresa,  <br />
+								como a ciência de dados pode ajudar a resolver o problema? </p>
+							<ul class="actions">
+								<li><a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+							</ul>
+					</header>
+
+				<!-- Cabeçario de links -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Projetos</a></li>
+							<li class="active"><a href="generic.html">Anúncio x Vendas </a></li>
+	
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">								
+								<div class="image main"><img src="images/dream house.jpg" alt="" /></div>
+
+								</header>
+								<!-- Texto e Imagem -->
+								
+								<h2> Problema de Negócio </h2> 
+
+								<p>	“A empresa "Casa dos sonhos" atua com empréstimos, financiando o sonho da casa própria para pessoas físicas. A empresa tem uma grande área de atuação, desde a área urbana, semiurbano e a área rural. Como a empresa recebe diversos pedidos diários para o empréstimo e o processo de avaliação de empréstimo é longa, a empresa começou a perder possíveis clientes com a demora do processo ser finalizado, sendo assim a empresa deseja desenvolver um modelo automático para aprovação ou não do cliente de forma automática para ganhar tempo e eficiência.”  
+
+								<h2> Como resolver esse problema com a ciência de dados </h2> 
+
+								<p>Entrando em campos técnicos, o problema que essa empresa apresentou é de classificação binária, no qual a solução é utilizar a base de dados da empresa que contém o histórico de aprovação / reprovação e diversas informações sobre cada caso individualmente. Essas informações serão utilizadas para montar um modelo de machine Learning que irá retornar com a resposta desejada.  
+
+								<h2>Descrição do trabalho realizado </h2> 
+
+								<p>Para o desenvolvimento de um modelo de classificação é necessário primeiro entender a base de dados, esse entendimento abrange saber se os dados são qualitativos e/ou quantitativos, como é a distribuição desses dados, presença de vazios entre outras coisas. Essas informações são importantes para saber quais técnicas de feature engineering serão necessárias para os dados. Como esse é um modelo de classificação, uma das importâncias é verificar se os dados são desbalanceados, ou seja, uma das classes apresenta uma presença muito superior em quantidade do que outra, isso tende a gerar resultados ruins em modelos de ML, então técnicas de balanceamento são necessárias e serão testadas nesse modelo. 
+
+								<p> Sobre qual modelo de machine learning, não há como definir qual se sairá melhor, sendo a forma mais adequada testar os modelos principais e chegar a uma conclusão. Para a resolução do problema proposto foram testados 8 modelos de ML com diferentes tratamentos de dados que geraram gráficos de box para permitir a avaliação da dispersão dos erros. 
+
+								<p> Para avaliar o resultado dos modelos de ML a medida escolhida foi F1_SCORE, sendo uma média harmônica entre a precisão e o recall, sendo uma forma de equilibrar os 2 resultados. 
+
+								<p> Ao clicar no botão abaixo será possível visualizar o código do projeto, onde todo o trabalho feito e o porquê foi feito está bem explicado, assim como a conclusão de todo o estudo. </p> 
+								<h3>Temas Abordados no projeto</h3>
+									<ul>
+										<li>Análise de dados
+											<ul>
+												<li>Geração Gráfica</li>	
+												<li>Estatística</li>	
+											</ul>
+										</li>
+										<li>Engenharia de características
+											<ul>
+												<li>balanceamento de dados</li>	
+												<li>Padronização de dados</li>	
+												<li>Normalização de dados</li>	
+											</ul>
+										</li>
+										<li>Análise de diversos modelos de classificação</li>
+										<li>Avaliação de resultados</li>
+									</ul>
+								
+								<div class="row">
+									<div class="col-12 col-12-small">
+										<ul class="actions special ">
+											<!-- Botão -->
+
+											<li><a href="Código em HTML/Loan_Eligible (1).html" class="button primary">Avaliação de empréstimo automatizado</a></li>
+										</ul>
+									</div>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+						
+							
+					<section>
+						<h3>Telefone de contado</h3>
+						<p><a href="#">(82) 99920-9828</a></p>
+					</section>
+					<section>
+						<h3>Email de contato</h3>
+						<p><a href="#">alcidesgabriel.ds@gmail.com</a></p>
+					</section>
+					<section>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="#" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+							<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="#" class="icon brands alt fa-medium"><span class="label">Medium</span></a></li>
+
+						</ul>
+					</section>
+				
+			</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
